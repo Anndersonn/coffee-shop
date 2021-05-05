@@ -5,6 +5,15 @@
 .header {
   background: -o-radial-gradient(center, circle, #1f2630 0%, #161c26 100%);
   background: radial-gradient(circle at center, #1f2630 0%, #161c26 100%);
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header__inner {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +32,13 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem 3rem 1rem 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar {
+  color: white;
 }
 
 .navbar ul {
@@ -35,6 +51,36 @@
   padding-left: 3rem;
 }
 
+.burger {
+  cursor: pointer;
+}
+
+.burger li {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin-top: 0.3rem;
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -o-transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.burger li:nth-child(2n+2) {
+  width: 15px;
+}
+
+.burger li:nth-child(2n+3) {
+  width: 10px;
+}
+
+.burger:hover li:nth-child(2n+2) {
+  width: 25px;
+}
+
+.burger:hover li:nth-child(2n+3) {
+  width: 25px;
+}
+
 .header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,10 +91,14 @@
   -webkit-box-flex: 3;
   -ms-flex-positive: 3;
   flex-grow: 3;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 19rem;
 }
 
 .header__info {
-  width: 40%;
+  width: 50%;
   max-width: 100%;
 }
 
@@ -70,14 +120,25 @@
   cursor: pointer;
 }
 
-.header__image {
-  width: 60%;
+.header__img {
+  width: 25%;
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+  transform: perspective(1000px);
 }
 
 .header__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem 3rem;
 }
 
 .header__social ul {
@@ -217,6 +278,8 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* change colours to suit your needs */
