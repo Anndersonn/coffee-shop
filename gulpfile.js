@@ -32,21 +32,21 @@ let path = {
                 MODULES
 ----------------------------------------*/
 
-let {src,dest} = require('gulp'),
-        gulp = require('gulp'),
-        browsersync = require('browser-sync').create();
-        fileinclude = require('gulp-file-include');
-        scss = require('gulp-sass');
-        autoprefixer = require('gulp-autoprefixer');
-        group_media = require('gulp-group-css-media-queries');
-        clean_css = require('gulp-clean-css');
-        rename = require('gulp-rename');
-        uglify = require('gulp-uglify-es').default;
-        babel = require('gulp-babel');
-        imagemin = require('gulp-imagemin');
-        webp = require('gulp-webp');
-        webphtml = require('gulp-webp-html');
-        webpcss = require('gulp-webpcss');
+let { src, dest } = require('gulp'),
+    gulp = require('gulp'),
+    browsersync = require('browser-sync').create();
+fileinclude = require('gulp-file-include');
+scss = require('gulp-sass');
+autoprefixer = require('gulp-autoprefixer');
+group_media = require('gulp-group-css-media-queries');
+clean_css = require('gulp-clean-css');
+rename = require('gulp-rename');
+uglify = require('gulp-uglify-es').default;
+babel = require('gulp-babel');
+imagemin = require('gulp-imagemin');
+webp = require('gulp-webp');
+webphtml = require('gulp-webp-html');
+webpcss = require('gulp-webpcss');
 
 /*----------------------------------------
                 BROWSERSYNC
@@ -151,7 +151,7 @@ function watchFiles() {
 /*----------------------------------------
                 PARALLELS
 ----------------------------------------*/
-let build = gulp.series(gulp.parallel (js, css, html, images));
+let build = gulp.series(gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
