@@ -29,6 +29,22 @@
     }
 }
 
+.link::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: $primary;
+    transition: linear .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    transition: linear .3s;
+}
+
+
+
 .burger {
     cursor: pointer;
 
@@ -104,6 +120,17 @@
     color: white;
     border-radius: 1.4rem;
     cursor: pointer;
+    background: linear-gradient(to top, #fff 50%, transparent 50%);
+    background-size: 100% 200%;
+    transition: all .2s ease-out;
+    outline: none;
+
+    &:hover {
+        background-position: bottom left;
+        color: black;
+        transition: .2s linear;
+        border: 2px solid #fff;
+    }
 }
 
 .header__img {
@@ -125,8 +152,13 @@
     ul {
         display: flex;
 
-        li {
+        a {
             padding-right: 3rem;
+
+            &:hover {
+                transition: ease-in-out .2s;
+                filter: brightness(2);
+            }
         }
     }
 }

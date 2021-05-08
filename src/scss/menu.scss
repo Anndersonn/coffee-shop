@@ -16,53 +16,96 @@
     max-width: 100%;
     padding: 0 1rem;
     flex-wrap: wrap;
+    box-shadow: 5px 0px 20px 0px #000000;
+    padding: 3rem;
+    justify-content: flex-end;
+    position: relative;
 
-}
-
-.menu__box {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    max-width: 100%;
-    padding: 1rem;
-    border-top: 2px solid $primary;
-    border-bottom: 2px solid $primary;
-
-    &:nth-child(2n+1) {
-        border-right: 2px solid $primary;
-    }
-
-    &-img {
-        width: 100px;
-        height: 160px;
-        position: absolute;
-    }
-
-    &-name {
-        justify-content: center;
+    .menu__box {
         display: flex;
-        font-size: 2rem;
-        color: $secondary
-    }
+        flex-direction: column;
+        width: 50%;
+        max-width: 100%;
+        padding: 1rem;
 
-    &-info {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 2rem;
-        padding: 0 0.8rem;
-        font-size: 1.4rem;
 
-        &:nth-of-type(4n) {
-            padding-bottom: 2rem
+
+        &-img {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 160px;
+        }
+
+        &-name {
+            justify-content: center;
+            display: flex;
+            font-size: 2rem;
+            color: $secondary
+        }
+
+        &-info {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+            padding: 0 0.8rem;
+            font-size: 1.4rem;
+
+            &:nth-of-type(4n) {
+                padding-bottom: 2rem
+            }
+        }
+
+        &-desc {
+            padding-right: 2.5rem;
+            color: white;
+        }
+
+        &-price {
+            color: $secondary;
         }
     }
-
-    &-desc {
-        padding-right: 2.5rem;
-        color: white;
-    }
-
-    &-price {
-        color: $secondary;
-    }
 }
+
+// .menu__box {
+//     display: flex;
+//     flex-direction: column;
+//     width: 50%;
+//     max-width: 100%;
+//     padding: 1rem;
+
+
+
+//     &-img {
+//         width: 100px;
+//         height: 160px;
+//     }
+
+//     &-name {
+//         justify-content: center;
+//         display: flex;
+//         font-size: 2rem;
+//         color: $secondary
+//     }
+
+//     &-info {
+//         display: flex;
+//         justify-content: flex-end;
+//         margin-top: 2rem;
+//         padding: 0 0.8rem;
+//         font-size: 1.4rem;
+
+//         &:nth-of-type(4n) {
+//             padding-bottom: 2rem
+//         }
+//     }
+
+//     &-desc {
+//         padding-right: 2.5rem;
+//         color: white;
+//     }
+
+//     &-price {
+//         color: $secondary;
+//     }
+// }

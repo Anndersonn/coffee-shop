@@ -46,6 +46,24 @@
   padding-left: 3rem;
 }
 
+.link::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: white;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.link:hover::after {
+  width: 100%;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
 .burger {
   cursor: pointer;
 }
@@ -119,6 +137,23 @@
   color: white;
   border-radius: 1.4rem;
   cursor: pointer;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #fff), color-stop(50%, transparent));
+  background: -o-linear-gradient(bottom, #fff 50%, transparent 50%);
+  background: linear-gradient(to top, #fff 50%, transparent 50%);
+  background-size: 100% 200%;
+  -webkit-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  outline: none;
+}
+
+.header__btn:hover {
+  background-position: bottom left;
+  color: black;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  border: 2px solid #fff;
 }
 
 .header__img {
@@ -149,8 +184,16 @@
   display: flex;
 }
 
-.header__social ul li {
+.header__social ul a {
   padding-right: 3rem;
+}
+
+.header__social ul a:hover {
+  -webkit-transition: ease-in-out .2s;
+  -o-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+  -webkit-filter: brightness(2);
+  filter: brightness(2);
 }
 
 html,
@@ -239,8 +282,7 @@ html {
 
 body {
   line-height: 1;
-  background: -o-radial-gradient(center, circle, #1f2630 0%, #161c26 100%);
-  background: radial-gradient(circle at center, #1f2630 0%, #161c26 100%);
+  background: #161c26;
 }
 
 article,
@@ -359,9 +401,16 @@ select {
   padding: 0 1rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-shadow: 5px 0px 20px 0px #000000;
+  box-shadow: 5px 0px 20px 0px #000000;
+  padding: 3rem;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
 }
 
-.menu__box {
+.menu__inner .menu__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,21 +421,16 @@ select {
   width: 50%;
   max-width: 100%;
   padding: 1rem;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
 }
 
-.menu__box:nth-child(2n+1) {
-  border-right: 2px solid white;
-}
-
-.menu__box-img {
+.menu__inner .menu__box-img {
+  position: absolute;
+  left: 0;
   width: 100px;
   height: 160px;
-  position: absolute;
 }
 
-.menu__box-name {
+.menu__inner .menu__box-name {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -397,7 +441,7 @@ select {
   color: #475364;
 }
 
-.menu__box-info {
+.menu__inner .menu__box-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,15 +453,70 @@ select {
   font-size: 1.4rem;
 }
 
-.menu__box-info:nth-of-type(4n) {
+.menu__inner .menu__box-info:nth-of-type(4n) {
   padding-bottom: 2rem;
 }
 
-.menu__box-desc {
+.menu__inner .menu__box-desc {
   padding-right: 2.5rem;
   color: white;
 }
 
-.menu__box-price {
+.menu__inner .menu__box-price {
   color: #475364;
+}
+
+.about {
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.about__left {
+  width: 65%;
+  max-width: 100%;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, color-stop(55%, #161c26), color-stop(100%, rgba(0, 255, 59, 0)), to(rgba(121, 9, 9, 0)));
+  background: -o-linear-gradient(left, #161c26 55%, rgba(0, 255, 59, 0) 100%, rgba(121, 9, 9, 0) 100%);
+  background: linear-gradient(to right, #161c26 55%, rgba(0, 255, 59, 0) 100%, rgba(121, 9, 9, 0) 100%);
+  position: relative;
+  padding: 3rem;
+}
+
+.about__info {
+  width: 35rem;
+  margin-top: 10rem;
+}
+
+.about__title {
+  font-size: 3rem;
+  color: #475364;
+  margin-bottom: 2rem;
+}
+
+.about__text {
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2rem;
+}
+
+.about__right {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  min-width: 70%;
+  min-height: 100%;
+}
+
+.about__right img {
+  width: 100%;
+  height: 100%;
 }
