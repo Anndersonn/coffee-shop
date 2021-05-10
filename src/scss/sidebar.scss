@@ -1,0 +1,54 @@
+.header__sidebar {
+    display: none;
+    height: 100vh;
+    width: 300px;
+    background-color: #161c26;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 2px 2px 2px 2px #161c26;
+    filter: brightness(0.5);
+    text-align: center;
+
+    img {
+        margin-top: 2rem;
+    }
+
+    &-nav {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        ul {
+            li {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+    }
+
+    &-link {
+        padding: 3rem;
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: transparent;
+        background: linear-gradient(to top, #fff 50%, transparent 50%);
+        background-size: 100% 200%;
+        outline: none;
+        transition: .4s linear;
+
+
+        &:hover {
+            transition: .4s linear;
+            background-position: bottom left;
+        }
+    }
+
+    &-social {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

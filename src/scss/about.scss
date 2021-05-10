@@ -21,7 +21,10 @@
 
 .about__info {
     width: 35rem;
+    max-width: 100%;
     margin-top: 10rem;
+    background: linear-gradient(to right, #161c26 100%, rgba(0, 255, 59, 0) 100%, rgba(121, 9, 9, 0) 100%);
+    box-shadow: 0px 0px 13px 18px #161c26;
 }
 
 .about__title {

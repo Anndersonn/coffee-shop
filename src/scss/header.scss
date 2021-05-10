@@ -2,6 +2,8 @@
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
+    padding: 0 2rem;
+
 }
 
 .header__inner {
@@ -13,8 +15,14 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 3rem 1rem 3rem;
+    padding: 3rem 0;
     align-items: center;
+
+    img {
+        padding-right: 0.5rem;
+
+    }
+
 }
 
 .navbar {
@@ -26,6 +34,10 @@
         li {
             padding-left: 3rem
         }
+    }
+
+    @media (max-width: $tablet) {
+        display: none;
     }
 }
 
@@ -46,6 +58,7 @@
 
 
 .burger {
+    display: none;
     cursor: pointer;
 
     li {
@@ -79,6 +92,10 @@
             }
         }
     }
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
 }
 
 
@@ -86,7 +103,6 @@
 .header__content {
     display: flex;
     max-width: 100%;
-    padding: 0 2rem;
     margin-top: 4rem;
     flex-grow: 3;
     align-items: center;
@@ -96,6 +112,10 @@
 .header__info {
     width: 50%;
     max-width: 100%;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
 }
 
 .header__title {
@@ -105,12 +125,20 @@
     span {
         color: $secondary;
     }
+
+    @media (max-width: $tablet) {
+        font-size: 4rem;
+    }
 }
 
 .header__text {
     font-size: 1.5rem;
     margin: 2rem 0;
     color: $secondary;
+
+    @media (max-width: $tablet) {
+        font-size: 1rem;
+    }
 }
 
 .header__btn {
@@ -140,6 +168,15 @@
     right: 15%;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+
+    @media (max-width: $tablet) {
+        width: 30%;
+        top: 25%;
+    }
+
+    @media (max-width: $mobile) {
+        display: none
+    }
 }
 
 

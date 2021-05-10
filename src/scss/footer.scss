@@ -1,3 +1,46 @@
 .footer {
+    display: flex;
     height: 200px;
+
+    .container {
+        display: flex;
+    }
+}
+
+
+.footer__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: unset;
+    }
+}
+
+.footer__contact {
+    color: white;
+
+    &-box {
+        align-items: center;
+        display: flex;
+        margin-top: 1rem;
+
+        p {
+            padding-left: 1rem;
+        }
+    }
+}
+
+.footer__social {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        padding-left: 1rem;
+    }
 }
