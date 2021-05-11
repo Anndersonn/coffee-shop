@@ -103,10 +103,15 @@
 .header__content {
     display: flex;
     max-width: 100%;
-    margin-top: 4rem;
+    margin-bottom: 10rem;
     flex-grow: 3;
     align-items: center;
-    margin-bottom: 19rem;
+
+    @media (max-width: $mobile) {
+        margin-top: 3rem;
+        margin-bottom: 0;
+        align-items: unset;
+    }
 }
 
 .header__info {
@@ -128,6 +133,10 @@
 
     @media (max-width: $tablet) {
         font-size: 4rem;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 3rem;
     }
 }
 
@@ -169,7 +178,7 @@
     transform-style: preserve-3d;
     transform: perspective(1000px);
 
-    @media (max-width: $tablet) {
+    @media (max-width: $per_tablet) {
         width: 30%;
         top: 25%;
     }
@@ -183,14 +192,18 @@
 .header__social {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 3rem;
     color: $secondary;
 
     ul {
         display: flex;
 
         a {
-            padding-right: 3rem;
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+
+            @media (max-width: $mobile) {
+                padding-right: 1rem;
+            }
 
             &:hover {
                 transition: ease-in-out .2s;

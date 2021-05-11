@@ -21,6 +21,23 @@ testWebP(function (support) {
   }
 });
 
+// sidebar
+
+let burger = document.querySelector('.burger')
+let sidebar = document.querySelector('.header__sidebar')
+let overlay = document.querySelector('.sidebar__overlay')
+
+burger.addEventListener('click', () => {
+  sidebar.classList.add('active')
+  overlay.classList.add('active')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('active')
+  sidebar.classList.remove('active')
+
+})
+
 
 // TILT JS
 

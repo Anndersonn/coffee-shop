@@ -13,10 +13,18 @@
 .about__left {
     width: 65%;
     max-width: 100%;
-    background: rgb(2, 0, 36);
+    background: #161c26;
     background: linear-gradient(to right, #161c26 55%, rgba(0, 255, 59, 0) 100%, rgba(121, 9, 9, 0) 100%);
     position: relative;
-    padding: 3rem;
+    padding-right: 3rem;
+
+    @media (max-width: $per_tablet) {
+        width: auto;
+    }
+
+    @media (max-width: $mobile) {
+        background: unset
+    }
 }
 
 .about__info {
@@ -25,6 +33,13 @@
     margin-top: 10rem;
     background: linear-gradient(to right, #161c26 100%, rgba(0, 255, 59, 0) 100%, rgba(121, 9, 9, 0) 100%);
     box-shadow: 0px 0px 13px 18px #161c26;
+
+    padding: 2rem;
+
+
+    @media (max-width: $per_tablet) {
+        margin-top: 0;
+    }
 }
 
 .about__title {
@@ -37,17 +52,34 @@
     font-size: 1.5rem;
     color: $primary;
     line-height: 2rem;
+
+    @media (max-width: $mobile) {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
 }
 
 .about__right {
     position: absolute;
     right: 0;
     z-index: -1;
-    min-width: 70%;
+    min-width: 100%;
     min-height: 100%;
 
     img {
+        position: absolute;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        box-shadow: inset 3px 3px 10px 10px #161c26;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
